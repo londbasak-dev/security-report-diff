@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "SyntheticScanner",
+          "rules": [
+            {
+              "id": "SYN001"
+            },
+            {
+              "id": "SYN002"
+            },
+            {
+              "id": "SYN003"
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "SYN001",
+          "level": "warning",
+          "message": {
+            "text": "Synthetic demonstration finding"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/alpha.py"
+                },
+                "region": {
+                  "startLine": 12
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "sample-alpha"
+          }
+        },
+        {
+          "ruleId": "SYN002",
+          "level": "note",
+          "message": {
+            "text": "Synthetic demonstration finding"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/old.py"
+                },
+                "region": {
+                  "startLine": 12
+                }
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "primaryLocationLineHash": "sample-old"
+          }
+        }
+      ]
+    }
+  ]
+}
